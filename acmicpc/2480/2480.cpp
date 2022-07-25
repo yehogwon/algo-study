@@ -22,14 +22,14 @@ int main(void) {
     cin.sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int a, b, c;
-    cin >> a >> b >> c;
+    int arr[3];
+    cin >> arr[0] >> arr[1] >> arr[2];
 
-    vector<int> v = {a, b, c};
+    vector<int> v(arr, arr + sizeof(int));
     v = sort(v);
 
     if (v[0] == v[2]) { // all of them are the same
-        cout << 10000 + a * 1000 << endl;
+        cout << 10000 + v[0] * 1000 << endl;
     } else if (v[0] == v[1] || v[1] == v[2]) { // two of them are the same
         int same = v[0] == v[1] ? v[1] : v[2];
         cout << 1000 + same * 100 << endl;
