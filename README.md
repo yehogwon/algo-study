@@ -6,15 +6,13 @@
  - **Codeforces**: [codeforces.com](https://codeforces.com)
  - **LeetCode**: [leetcode.com](https://leetcode.com)
  - **AtCoder**: [atcoder.jp](https://atcoder.jp)
----
 
 ## **1. Solved**
 ### **BOJ**
-18108, 10926, 25083, 2480, 17478
+18108, 10926, 25083, 2480, 17478, 3053
 ### **Codeforces**
 ### **LeetCode**
 ### **AtCoder**
----
 
 ## **2. Working on**
 ### **BOJ**
@@ -22,7 +20,6 @@
 ### **Codeforces**
 ### **LeetCode**
 ### **AtCoder**
----
 
 ## **3. Planned to be solved**
 ### **BOJ**
