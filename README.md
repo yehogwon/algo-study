@@ -33,4 +33,14 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
 ## **LeetCode**
 
- - two-sum: [solved](https://leetcode.com/problems/two-sum)
+ - Two Sum: [solved](https://leetcode.com/problems/two-sum)
+
+ - Palindrome Number: [solved](https://leetcode.com/problems/palindrome-number)
+
+ - Sqrt(x): [solved](https://leetcode.com/problems/sqrtx)
+
+ - Plus One: [solved](https://leetcode.com/problems/plus-one)
+
+ - Add Binary: [solved](https://leetcode.com/problems/add-binary)
+
+ - Implement strStr(): [solved](https://leetcode.com/problems/implement-strstr)
