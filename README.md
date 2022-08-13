@@ -33,4 +33,4 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
 ## **LeetCode**
 
- - 
+ - two-sum: [solved](https://leetcode.com/problems/two-sum)
