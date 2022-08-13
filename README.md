@@ -1,5 +1,5 @@
 # Algorithm Study for Coding Test
-**This repository is for record my ps history. It consists of BOJ (Baekjoon; acmicpc), Codeforces, LeetCode, AtCoder,  *etc*.**
+This repository is for record my ps history. It consists of BOJ (Baekjoon; acmicpc), Codeforces, LeetCode, AtCoder,  *etc*.
 
 ## Sources of Problems
  - **BOJ**: [acmicpc.net](https://acmicpc.net)
@@ -30,3 +30,7 @@
  - 1920: [solved](https://www.acmicpc.net/problem/1920)
 
  - 7568: [working on it](https://www.acmicpc.net/problem/7568)
+
+## **LeetCode**
+
+ - 
