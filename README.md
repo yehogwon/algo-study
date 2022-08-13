@@ -44,3 +44,11 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - Add Binary: [solved](https://leetcode.com/problems/add-binary)
 
  - Implement strStr(): [solved](https://leetcode.com/problems/implement-strstr)
+
+ - Valid Parentheses: [solved](https://leetcode.com/problems/valid-parentheses)
+
+ - Power of Two: [solved](https://leetcode.com/problems/power-of-two)
+
+ - Add Digits: [solved](https://leetcode.com/problems/add-digits)
+
+ - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
