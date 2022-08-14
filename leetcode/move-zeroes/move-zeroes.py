@@ -1,3 +1,4 @@
+# working on it
 nums = [0, 1]
 
 if nums[0] == 0: 

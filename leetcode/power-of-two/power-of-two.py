@@ -1,3 +1,4 @@
+# solved
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
         # check whether n is can be represented by a form of 2^x (2 to the xth power where x is an integer)

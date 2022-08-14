@@ -53,8 +53,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Number of 1 Bits: [solved](https://leetcode.com/problems/number-of-1-bits)
 
+ - Reverse Bits: [solved](https://leetcode.com/problems/reverse-bits)
+
+ - Happy Number: [solved](https://leetcode.com/problems/happy-number)
+
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
-
- - Reverse Bits: [working on it](https://leetcode.com/problems/reverse-bits)
-
- - Happy Number: [working on it](https://leetcode.com/problems/happy-number)

@@ -1,3 +1,4 @@
+# solved
 class Solution:
     def addBinary(self, a: str, b: str) -> str:
         int_a = [int(i) for i in a][::-1]
