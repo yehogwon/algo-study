@@ -1,3 +1,4 @@
+# solved
 class Solution:
     def isValid(self, s: str) -> bool:
         def open_to_close(s: str): 

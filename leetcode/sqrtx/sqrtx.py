@@ -1,3 +1,4 @@
+# solved
 class Solution:
     def mySqrt(self, x: int) -> int:
         n = 0

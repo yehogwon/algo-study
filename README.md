@@ -71,6 +71,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Permutations: [solved](https://leetcode.com/problems/permutations)
 
+ - Subsets: [solved](https://leetcode.com/problems/subsets)
+
+ - Roman to Integer: [solved](https://leetcode.com/problems/roman-to-integer)
+
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
