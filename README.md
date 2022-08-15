@@ -59,6 +59,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Longest Common Prefix: [solved](https://leetcode.com/problems/longest-common-prefix)
 
+ - Add Two Integers: [solved](https://leetcode.com/problems/add-two-integers)
+
+ - Concatenation of Array: [solved](https://leetcode.com/problems/concatenation-of-array)
+
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
