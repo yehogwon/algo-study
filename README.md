@@ -69,7 +69,7 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Climbing Stairs: [solved](https://leetcode.com/problems/climbing-stairs)
 
- - Permutations: [working on it](https://leetcode.com/problems/permutations)
+ - Permutations: [solved](https://leetcode.com/problems/permutations)
 
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
 
