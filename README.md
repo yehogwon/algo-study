@@ -63,6 +63,14 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Concatenation of Array: [solved](https://leetcode.com/problems/concatenation-of-array)
 
+ - Merge Two Sorted Lists: [solved](https://leetcode.com/problems/merge-two-sorted-lists)
+ 
+ - Search Insert Position: [solved](https://leetcode.com/problems/search-insert-position)
+
+ - Climbing Stairs: [solved](https://leetcode.com/problems/climbing-stairs)
+
+ - Permutations: [working on it](https://leetcode.com/problems/permutations)
+
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
