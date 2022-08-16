@@ -87,8 +87,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Rotate Image: [solved](https://leetcode.com/problems/rotate-image)
 
+ - Move Zeroes: [solved](https://leetcode.com/problems/move-zeroes)
+
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
- - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
+ - Palindromic Substrings: [working on it](https://leetcode.com/problems/palindromic-substrings)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
