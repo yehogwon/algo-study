@@ -75,6 +75,16 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Roman to Integer: [solved](https://leetcode.com/problems/roman-to-integer)
 
+ - Maximum Depth of Binary Tree: [solved](https://leetcode.com/problems/maximum-depth-of-binary-tree)
+
+ - First Unique Character in a String: [solved](https://leetcode.com/problems/first-unique-character-in-a-string)
+
+ - Invert Binary Tree: [solved](https://leetcode.com/problems/invert-binary-tree)
+
+ - Reverse Linked List: [solved](https://leetcode.com/problems/reverse-linked-list)
+
+ - Single Number: [solved](https://leetcode.com/problems/single-number)
+
  - Move Zeroes: [working on it](https://leetcode.com/problems/move-zeroes)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
