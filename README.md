@@ -89,6 +89,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Move Zeroes: [solved](https://leetcode.com/problems/move-zeroes)
 
+ - Binary Tree Inorder Traversal: [solved](https://leetcode.com/problems/binary-tree-inorder-traversal)
+
+ - Unique Paths: [solved](https://leetcode.com/problems/unique-paths)
+
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
  - Palindromic Substrings: [working on it](https://leetcode.com/problems/palindromic-substrings)
