@@ -93,8 +93,12 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Unique Paths: [solved](https://leetcode.com/problems/unique-paths)
 
+ - Unique Morse Code Words: [solved](https://leetcode.com/problems/unique-morse-code-words)
+
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
  - Palindromic Substrings: [working on it](https://leetcode.com/problems/palindromic-substrings)
 
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
+
+ - Partition Labels: [working on it](https://leetcode.com/problems/partition-labels)
