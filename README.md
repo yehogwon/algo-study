@@ -95,6 +95,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Unique Morse Code Words: [solved](https://leetcode.com/problems/unique-morse-code-words)
 
+ - Binary Tree Right Side View: [solved](https://leetcode.com/problems/binary-tree-right-side-view)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
