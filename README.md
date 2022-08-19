@@ -97,6 +97,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Binary Tree Right Side View: [solved](https://leetcode.com/problems/binary-tree-right-side-view)
 
+ - Delete Node in a Linked List: [solved](https://leetcode.com/problems/delete-node-in-a-linked-list)
+
+ - Reverse String: [solved](https://leetcode.com/problems/reverse-string)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
