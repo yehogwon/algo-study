@@ -101,6 +101,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Reverse String: [solved](https://leetcode.com/problems/reverse-string)
 
+ - Deepest Leaves Sum: [solved](https://leetcode.com/problems/deepest-leaves-sum)
+
+ - Merge Nodes in Between Zeros: [solved](https://leetcode.com/problems/merge-nodes-in-between-zeros)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
@@ -112,3 +116,5 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - Partition Labels: [working on it](https://leetcode.com/problems/partition-labels)
 
  - Number of Visible People in a Queue: [working on it](https://leetcode.com/problems/number-of-visible-people-in-a-queue)
+
+ - Count Nodes Equal to Average of Subtree: [working on it](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree)
