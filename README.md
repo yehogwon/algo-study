@@ -106,3 +106,5 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - Divide Two Integers: [working on it](https://leetcode.com/problems/divide-two-integers)
 
  - Partition Labels: [working on it](https://leetcode.com/problems/partition-labels)
+
+ - Number of Visible People in a Queue: [working on it](https://leetcode.com/problems/number-of-visible-people-in-a-queue)
