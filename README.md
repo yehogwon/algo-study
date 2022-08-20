@@ -109,6 +109,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Recover a Tree From Preorder Traversal: [solved](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal)
 
+ - Count Vowels Permutation: [solved](https://leetcode.com/problems/count-vowels-permutation)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
