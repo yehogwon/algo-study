@@ -105,6 +105,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Merge Nodes in Between Zeros: [solved](https://leetcode.com/problems/merge-nodes-in-between-zeros)
 
+ - Minimum Number of Refueling Stops: [solved](https://leetcode.com/problems/minimum-number-of-refueling-stops)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
