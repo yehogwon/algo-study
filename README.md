@@ -107,6 +107,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Minimum Number of Refueling Stops: [solved](https://leetcode.com/problems/minimum-number-of-refueling-stops)
 
+ - Recover a Tree From Preorder Traversal: [solved](https://leetcode.com/problems/recover-a-tree-from-preorder-traversal)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
