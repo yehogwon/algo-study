@@ -129,6 +129,12 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Root Equals Sum of Children: [solved](https://leetcode.com/problems/root-equals-to-sum-of-left-leaves)
 
+ - Symmetric Tree: [solved](https://leetcode.com/problems/symmetric-tree)
+
+ - Diameter of Binary Tree: [solved](https://leetcode.com/problems/diameter-of-binary-tree)
+
+ - Majority Element: [solved](https://leetcode.com/problems/majority-element)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
