@@ -135,6 +135,10 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Majority Element: [solved](https://leetcode.com/problems/majority-element)
 
+ - Linked List Cycle: [solved](https://leetcode.com/problems/linked-list-cycle)
+
+ - Linked List Cycle II: [solved](https://leetcode.com/problems/linked-list-cycle-ii)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
