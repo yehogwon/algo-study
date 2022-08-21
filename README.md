@@ -113,6 +113,22 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Search a 2D Matrix II: [solved](https://leetcode.com/problems/search-a-2d-matrix-ii)
 
+ - Build Array from Permutation: [solved](https://leetcode.com/problems/build-array-from-permutation)
+ 
+ - Running Sum of 1d Array: [solved](https://leetcode.com/problems/running-sum-of-1d-array)
+
+ - Defanging an IP Address: [solved](https://leetcode.com/problems/defanging-an-ip-address)
+
+ - Final Value of Variable After Performing Operations: [solved](https://leetcode.com/problems/final-value-of-variable-after-performing-operations)
+
+ - Richest Customer Wealth: [solved](https://leetcode.com/problems/richest-customer-wealth)
+
+ - Shuffle the Array: [solved](https://leetcode.com/problems/shuffle-the-array)
+
+ - Maximum Number of Words Found in Sentences: [solved](https://leetcode.com/problems/maximum-number-of-words-found-in-a-sentence)
+
+ - Root Equals Sum of Children: [solved](https://leetcode.com/problems/root-equals-to-sum-of-left-leaves)
+
  - Decode String: [working on it](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
