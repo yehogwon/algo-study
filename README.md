@@ -145,7 +145,7 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Minimum Path Sum: [solved](https://leetcode.com/problems/minimum-path-sum)
 
- - Decode String: [working on it](https://leetcode.com/problems/decode-string)
+ - Decode String: [solved](https://leetcode.com/problems/decode-string)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 

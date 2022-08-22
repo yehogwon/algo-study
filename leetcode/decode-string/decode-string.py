@@ -1,47 +1,25 @@
-s = "3[z]2[2[y]pq4[2[jk]e1[f]]]ef"
-'''
-3[z]
-2
-'''
-'''
-3[z]
+# solved
+class Solution:
+    def decodeString(self, s: str) -> str:
+        coeffs = [] # depth = len(coeffs)
+        stack = [''] # depth = len(bunchs), so basically, coeffs and bunchs have the same lengths
 
-2[2[y] pq 4[2[jk] e 1[f]]]
-
-ef
-'''
-
-coeffs = [] # depth = len(coeffs)
-bunches = [] # depth = len(bunchs), so basically, coeffs and bunchs have the same lengths
-result = ''
-_keep = False
-for i, c in enumerate(s): 
-    print(i, c, coeffs, bunches, result)
-    if c.isnumeric(): # start of a bunch
-        coeff = int(c)
-        if _keep: 
-            coeffs[-1] = 10 * coeffs[-1] + coeff
-        else: 
-            coeffs.append(coeff)
-            _keep = True
-    elif c == '[': 
-        _keep = False
-    elif c == ']': 
-        coeff, bunch = coeffs.pop(), bunches.pop()
-        _str = coeff * bunch
-        if len(coeffs) > 0: 
-            if len(bunches) == 0: 
-                bunches.append(_str)
-            else: 
-                bunches[-1] += _str
-        else: 
-            result += _str
-    else: # just a plain character
-        if len(coeffs) > 0: 
-            if len(bunches) < len(coeffs): 
-                bunches.append('')
-            bunches[-1] += c
-        else: 
-            result += c
-
-print(result)
+        i = 0
+        while i < len(s): 
+            c = s[i]
+            # print(i, c, coeffs, stack)
+            if c.isnumeric(): 
+                start_n, end_n = i, i + 1
+                while s[end_n - 1].isnumeric(): 
+                    end_n += 1
+                i = end_n - 2
+                coeffs.append(int(s[start_n:end_n - 1]))
+            elif c == '[': # end stack
+                stack.append('')
+            elif c == ']': # start stack
+                coeff, _m = coeffs.pop(), stack.pop()
+                stack[-1] += coeff * _m
+            else: # c is a plain character
+                stack[-1] += c
+            i += 1
+        return stack[0]
