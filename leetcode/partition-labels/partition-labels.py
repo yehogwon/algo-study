@@ -1,46 +1,46 @@
 # working on it
+from typing import List
 
-s = "ababcbacadefegdehijhklij"
-print(' -> -> -> -> -> ', len(s))
+def debug(m: str, bias=True) -> None: 
+    if bias: 
+        print(m)
 
-import math
-from time import sleep
-
-####################################################################3
-
-def ok(s1: set, s2: set): 
-    _s1, _s2 = set(s1), set(s2)
-    return (not (_s1 & _s2)) and len(s1) > 0 and len(s2) > 0
-
-def sep(m: str): # returns a list of strings whosef length is 2
-    i = 0
-    _check = False
-    _again = False
-    while True: 
-        print(i)
-        sleep(0.1)
-        if i > len(m) - 1: 
-            _again = True
-        if _check is True: 
-            i += 1
-            if not ok(m[:i], m[i + 1:]): 
-                break
-        else: 
-            if ok(m[:i], m[i + 1:]): 
-                _check = True
+def partitionLabels(s: str, log=False) -> List[int]:
+    def in_common(s1: str, s2: str) -> bool: # O(n) : returns True if they don't have common elements
+        if len(s1) == 0 or len(s2) == 0: 
+            return True
+        _s1, _s2 = set(s1), set(s2) # O(n)
+        return bool(_s1 & _s2) # O(n)
+    
+    last = {k: v for v, k in enumerate(s)} # O(n)
+    def solve(_s, cut=0): # less than O(n)
+        debug('solve(): ' + _s + f', cut={cut}', log)
+        i = 0
+        _flag = False
+        while i < len(_s): 
+            debug(i, log)
+            if _flag: 
+                if in_common(_s[:i + 1], _s[i + 1:]): 
+                    return [i] + solve(_s[i:], i + cut)
+                i += 1
             else: 
-                i *= 2
-    if _again: 
-        i = 1
-    if i <= 0: 
-        return len(m) - 1
-    else: 
-        return i - 1
+                c = _s[i]
+                i = last[c] - cut
+                _left, _right = _s[:i + 1], _s[i + 1:]
+                debug(f'CHECK: {c} -> {i} == {_left}, {_right}', log)
+                _check = in_common(_left, _right)
+                debug(f'Do they have in common? : ' + _left + ' = ' + _right + ' => ' + str(_check), log)
+                if not _check: # If they satisfy
+                    _flag = True
+                else: # If they don't satisfy
+                    break
+        return [len(_s)]
+    return solve(s, 0)
 
-partitions = []
-while len(s) > 0: 
-    idx = sep(s)
-    s = s[idx:]
-    partitions.append(idx)
-    print(idx, s)
-print(partitions)
+def test(args, anss, logs): 
+    for arg, ans, log in zip(args, anss, logs): 
+        print('=' * 15)
+        print(partitionLabels(arg, log), ' -> ', ans)
+
+test(["ababcbacadefegdehijhklij", "eccbbbbdec", "eaaaabaaec", "dccccbaabe"], 
+    [[9, 7, 8], [10], [9, 1], [1, 4, 4, 1]], [True, False, False, False])
