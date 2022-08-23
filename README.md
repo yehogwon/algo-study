@@ -147,6 +147,14 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Decode String: [solved](https://leetcode.com/problems/decode-string)
 
+ - Container With Most Water: [solved](https://leetcode.com/problems/container-with-most-water)
+
+ - Generate Parentheses: [solved](https://leetcode.com/problems/generate-parentheses)
+
+ - Partitioning Into Minimum Number Of Deci-Binary Numbers: [solved](https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers)
+
+ - Subrectangle Queries: [solved](https://leetcode.com/problems/subrectangle-queries)
+
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
  - Palindromic Substrings: [working on it](https://leetcode.com/problems/palindromic-substrings)
