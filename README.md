@@ -159,6 +159,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - Combination Sum: [solved](https://leetcode.com/problems/combination-sum)
 
+ - Sorting the Sentence: [solved](https://leetcode.com/problems/sorting-the-sentence)
+
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
  - Palindromic Substrings: [working on it](https://leetcode.com/problems/palindromic-substrings)
