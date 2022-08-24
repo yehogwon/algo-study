@@ -7,12 +7,12 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - **Codeforces**: [codeforces.com](https://codeforces.com)
 
 ## Check Lists
- - [ ] **Solve:** Today's Problem
+ - [ ] Solve: Today's Problem
  - [x] **Solve:** Partition Labels
  - [x] **Solve:** Palindromic Substrings
- - [ ] **Improve:** Palindromic Substrings
- - [ ] **Solve:** Divide Two Integers
- - [ ] **Solve:** Validate Binary Search Tree
+ - [ ] Improve: Palindromic Substrings
+ - [ ] Solve: Divide Two Integers
+ - [ ] Solve: Validate Binary Search Tree
 
 ## BOJ
 
