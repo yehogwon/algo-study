@@ -1,13 +1,20 @@
 # Algorithm Study for Coding Test
-This repository is for record my ps history. It consists of BOJ (Baekjoon; acmicpc), Codeforces, LeetCode, AtCoder,  *etc*.
+This repository is for record my ps history. It consists of BOJ (Baekjoon; acmicpc), LeetCode, Codeforces, AtCoder,  *etc*.
 
 ## Sources of Problems
  - **BOJ**: [acmicpc.net](https://acmicpc.net)
  - **LeetCode**: [leetcode.com](https://leetcode.com)
  - **Codeforces**: [codeforces.com](https://codeforces.com)
- - **ALGOSPOT**: [algospot.com](https://www.algospot.com/)
 
-## **BOJ**
+## Check Lists
+ - [ ] **Solve:** Today's Problem
+ - [x] **Solve:** Partition Labels
+ - [x] **Solve:** Palindromic Substrings
+ - [ ] **Improve:** Palindromic Substrings
+ - [ ] **Solve:** Divide Two Integers
+ - [ ] **Solve:** Validate Binary Search Tree
+
+## BOJ
 
  - 18108: [solved](https://www.acmicpc.net/problem/18108)
 
@@ -31,7 +38,7 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
 
  - 7568: [working on it](https://www.acmicpc.net/problem/7568)
 
-## **LeetCode**
+## LeetCode
 
  - Two Sum: [solved](https://leetcode.com/problems/two-sum)
 
