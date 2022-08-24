@@ -11,7 +11,6 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - [x] **Solve:** Partition Labels
  - [x] **Solve:** Palindromic Substrings
  - [ ] Improve: Palindromic Substrings
- - [ ] Solve: Divide Two Integers
 
 ## BOJ
 
