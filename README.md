@@ -12,7 +12,6 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - [x] **Solve:** Palindromic Substrings
  - [ ] Improve: Palindromic Substrings
  - [ ] Solve: Divide Two Integers
- - [ ] Solve: Validate Binary Search Tree
 
 ## BOJ
 
