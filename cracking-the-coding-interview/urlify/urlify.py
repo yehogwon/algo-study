@@ -1,23 +1,16 @@
 def solution(url: str, true_length: int) -> str: 
     url = list(url) # In python, string doesn't support index manipulation. 
     
-    # replace a single space with three contiguous spaces
+    # replace a single space with "%20"
     spaces = len(''.join(url).split()) - 1 # find the number of spaces in the url
-    i = true_length - 1
-    while spaces > 0: # O(n)
-        print(i, url)
+    idx = true_length + spaces * 2
+    for i in range(true_length - 1, -1, -1): 
         if url[i] == ' ': 
-            spaces -= 1
+            url[idx-3:idx] = ['%', '2', '0']
+            idx -= 3
         else: 
-            url[i + spaces * 2] = url[i]
-            url[i] = ' '
-        i -= 1
-    # replace three contiguous spaces to %20
-    i = 0
-    while i < len(url) - 2: # O(n)
-        if url[i:i + 3] == [' '] * 3: 
-            url[i:i + 3] = '%20'
-        i += 1
+            url[idx - 1] = url[i]
+            idx -= 1
     return ''.join(url) # in-place, but return it to print
 
 if __name__ == '__main__': 
