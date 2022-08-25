@@ -7,9 +7,7 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - **Codeforces**: [codeforces.com](https://codeforces.com)
 
 ## Check Lists
- - [x] **Solve:** Today's Problem: Power Of Three
- - [x] **Solve:** Partition Labels
- - [x] **Solve:** Palindromic Substrings
+ - [x] **Solve:** Today's Problem: Ransom Note
  - [ ] Improve: Palindromic Substrings
 
 ## BOJ
@@ -171,6 +169,8 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - Palindromic Substrings: [solved](https://leetcode.com/problems/palindromic-substrings)
 
  - Power Of Three: [solved](https://leetcode.com/problems/power-of-three)
+
+ - Ransom Note: [solved](https://leetcode.com/problems/ransom-note)
 
  - Validate Binary Search Tree: [working on it](https://leetcode.com/problems/validate-binary-search-tree)
 
