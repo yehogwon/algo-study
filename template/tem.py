@@ -11,7 +11,7 @@ class SolutionTest(unittest.TestCase):
         super().__init__(methodName)
         self.input, self.output = param[0], param[1]
     def test_runs(self): 
-        self.assertEqual(self.input, self.output)
+        self.assertEqual(solution(*self.input), self.output)
 
 if __name__ == '__main__': 
     cases = [] # edit here
