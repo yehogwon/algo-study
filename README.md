@@ -7,8 +7,7 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - **Codeforces**: [codeforces.com](https://codeforces.com)
 
 ## Check Lists
- - [x] **Solve:** Today's Problem: Ransom Note
- - [ ] Improve: Palindromic Substrings
+ - [ ] **Solve:** Today's Problem
 
 ## BOJ
 
