@@ -1,3 +1,4 @@
+from typing import Tuple
 import unittest
 
 
@@ -5,11 +6,16 @@ def solution() -> None:
     pass
 
 
-class TestSolution(unittest.TestCase):
+class SolutionTest(unittest.TestCase):
+    def __init__(self, methodName: str, param: Tuple) -> None:
+        super().__init__(methodName)
+        self.input, self.output = param[0], param[1]
     def test_runs(self): 
-        cases = []
-        for i, o in cases: 
-            self.assertEqual(solution(i), o)
+        self.assertEqual(self.input, self.output)
 
 if __name__ == '__main__': 
-    unittest.main()
+    cases = [] # edit here
+    suite = unittest.TestSuite()
+    for i, o in cases: 
+        suite.addTest(SolutionTest('test_runs', (i, o)))
+    unittest.TextTestRunner(verbosity=2).run(suite)
