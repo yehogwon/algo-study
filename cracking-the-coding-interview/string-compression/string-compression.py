@@ -1,34 +1,29 @@
+from typing import Tuple
 import unittest
 
 
 def solution(org: str) -> str: 
-    if len(org) == 0: 
-        return ''
     comp = ''
-    tmp = org[0] # keep it of length 1
-    _count = 1
-    for c in org[1:]:
-        if c == tmp: 
-            _count += 1
-        else: 
-            comp += tmp + str(_count)
-            tmp = c
-            _count = 1
-    comp += tmp + str(_count)
+    count = 0
+    for i, c in enumerate(org):
+        if i != 0 and c != org[i - 1]: 
+            comp += org[i - 1] + str(count)
+            count = 0
+        count += 1
+    comp += org[-1] + str(count)
+    return min(org, comp, key=len)
 
-    if len(comp) >= len(org): 
-        return org
-    else: 
-        return comp
 
-class TestSolution(unittest.TestCase):
+class SolutionTest(unittest.TestCase):
+    def __init__(self, methodName: str, param: Tuple) -> None:
+        super().__init__(methodName)
+        self.input, self.output = param[0], param[1]
     def test_runs(self): 
-        cases = [
-            ('aabcccccaaa', 'a2b1c5a3'), 
-            ('abcdef', 'abcdef')
-        ]
-        for i, o in cases: 
-            self.assertEqual(solution(i), o)
+        self.assertEqual(solution(self.input), self.output)
 
 if __name__ == '__main__': 
-    unittest.main()
+    cases = [('aabcccccaaa', 'a2b1c5a3'), ('abcdef', 'abcdef')] # edit here
+    suite = unittest.TestSuite()
+    for i, o in cases: 
+        suite.addTest(SolutionTest('test_runs', (i, o)))
+    unittest.TextTestRunner(verbosity=2).run(suite)
