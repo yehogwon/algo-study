@@ -16,12 +16,18 @@ class Node:
             text = text[:-4]
         return text
 
-# Linked List without any cycle
 class LinkedList: 
-    @staticmethod
-    def create(l: List[Union[int, str]]) -> Node: 
+    @classmethod
+    def create(cls, l: List[Union[int, str]], cycle: int=-1) -> Node: 
         if (not l) or len(l) == 0: 
             return
+        if cycle >= 0: 
+            return cls._create_cycle(l, cycle)
+        else: 
+            return cls._create(l)
+    
+    @staticmethod
+    def _create(l: List[Union[int, str]]) -> Node: 
         head = Node()
         cur = head
         for val in l: 
@@ -30,22 +36,7 @@ class LinkedList:
         return head.next
     
     @staticmethod
-    def append(root: Node, l: List[Union[int, str]]) -> None: 
-        if (not l) or len(l) == 0: 
-            return
-        head = Node()
-        cur = head
-        for i, val in enumerate(l): 
-            cur.next = Node(val)
-            cur = cur.next
-        root.next = head.next
-
-# Linked List with a cycle
-class LinkedList: 
-    @staticmethod
-    def create(l: List[Union[int, str]], cycle: int=-1) -> Node: 
-        if (not l) or len(l) == 0: 
-            return None
+    def _create_cycle(l: List[Union[int, str]], cycle: int=-1) -> Node: 
         head = Node()
         cur = head
         _cycle = None
@@ -63,8 +54,7 @@ class LinkedList:
             return
         head = Node()
         cur = head
-        _cycle = None
-        for i, val in enumerate(l): 
+        for val in l: 
             cur.next = Node(val)
             cur = cur.next
         root.next = head.next
