@@ -22,9 +22,9 @@ class LinkedList:
 # Linked List with a cycle
 class LinkedList: 
     @staticmethod
-    def create(l: List[Union[int, str]], cycle: int=-1): 
-        if (not len) or len(l) == 0: 
-            return 0
+    def create(l: List[Union[int, str]], cycle: int=-1) -> Node: 
+        if (not l) or len(l) == 0: 
+            return None
         head = Node()
         cur = head
         _cycle = None
@@ -35,3 +35,15 @@ class LinkedList:
                 _cycle = cur
         cur.next = _cycle
         return head.next
+    
+    @staticmethod
+    def append(root: Node, l: List[Union[int, str]]) -> None: 
+        if (not l) or len(l) == 0: 
+            return
+        head = Node()
+        cur = head
+        _cycle = None
+        for i, val in enumerate(l): 
+            cur.next = Node(val)
+            cur = cur.next
+        root.next = head.next
