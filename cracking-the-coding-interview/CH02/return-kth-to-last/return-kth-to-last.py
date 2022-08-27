@@ -9,14 +9,15 @@ from linear import Node, LinkedList
 
 
 def solution(root: Node, k: int) -> Union[int, str]: 
-    val_stack = []
+    length = -1
     cursor = root
-    while cursor is not None: 
-        val_stack.append(cursor.val)
+    while cursor is not None: # O(n)
+        length += 1
         cursor = cursor.next
-    for _ in range(k - 1): 
-        val_stack.pop()
-    return val_stack.pop()
+    cursor = root
+    for _ in range(length - k + 1): 
+        cursor = cursor.next
+    return cursor.val
 
 
 class SolutionTest(unittest.TestCase):
