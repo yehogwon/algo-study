@@ -5,6 +5,16 @@ class Node:
     def __init__(self, val: Union[int, str]=None, next=None) -> None: 
         self.val = val
         self.next = next
+    
+    def __str__(self) -> str:
+        text = ''
+        cursor = self
+        while cursor is not None: 
+            text += str(cursor.val) + ' -> '
+            cursor = cursor.next
+        if len(text) > 0: 
+            text = text[:-4]
+        return text
 
 # Linked List without any cycle
 class LinkedList: 
@@ -25,7 +35,6 @@ class LinkedList:
             return
         head = Node()
         cur = head
-        _cycle = None
         for i, val in enumerate(l): 
             cur.next = Node(val)
             cur = cur.next
