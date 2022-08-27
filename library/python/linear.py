@@ -9,15 +9,27 @@ class Node:
 # Linked List without any cycle
 class LinkedList: 
     @staticmethod
-    def create(l: List[Union[int, str]]): 
-        if (not len) or len(l) == 0: 
-            return 0
+    def create(l: List[Union[int, str]]) -> Node: 
+        if (not l) or len(l) == 0: 
+            return
         head = Node()
         cur = head
         for val in l: 
             cur.next = Node(val)
             cur = cur.next
         return head.next
+    
+    @staticmethod
+    def append(root: Node, l: List[Union[int, str]]) -> None: 
+        if (not l) or len(l) == 0: 
+            return
+        head = Node()
+        cur = head
+        _cycle = None
+        for i, val in enumerate(l): 
+            cur.next = Node(val)
+            cur = cur.next
+        root.next = head.next
 
 # Linked List with a cycle
 class LinkedList: 
