@@ -5,6 +5,9 @@ This repository is for record my ps history. It consists of BOJ (Baekjoon; acmic
  - **BOJ**: [acmicpc.net](https://acmicpc.net)
  - **LeetCode**: [leetcode.com](https://leetcode.com)
  - **Codeforces**: [codeforces.com](https://codeforces.com)
+ - **Cracking The Coding Interview**: [crackingthecodinginterview.com](https://www.crackingthecodinginterview.com/)
+
+ My **algorithm study blog** is here: [link](https://yehok117.notion.site/Cracking-the-Coding-Interview-34bc6686d25043c8ad8bdd7e287b7568)
 
 ## Check Lists
  - [ ] **Solve:** Today's Problem
