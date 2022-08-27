@@ -1,6 +1,11 @@
+import sys
+sys.path.append(sys.path[0] + '/../../../library/python')
+
 from typing import Tuple, Union
 import unittest
 
+
+from linear import Node, LinkedList
 
 
 def solution(root: Node, k: int) -> Union[int, str]: 
