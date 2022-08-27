@@ -5,7 +5,7 @@ from typing import Deque, List, Optional, TypeVar, Union
 class Node: 
     def __init__(self, val: Union[int, str]=None, next=None) -> None: 
         self.val = val
-        self.next = next
+        self.next: Node = next
     
     def __str__(self, reverse=False) -> str:
         text = ''
