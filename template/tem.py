@@ -1,3 +1,6 @@
+import sys
+sys.path.append(sys.path[0] + '/../../library/python')
+
 from typing import Tuple
 import unittest
 
