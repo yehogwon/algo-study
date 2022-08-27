@@ -1,47 +1,35 @@
-from collections import defaultdict
+import sys
+sys.path.append(sys.path[0] + '/../../../library/python')
+
+from typing import Tuple, List, Union
 import unittest
-from typing import List, Union
 
 
-class Node: 
-    def __init__(self, val: Union[int, str]=None, next=None) -> None: 
-        self.val = val
-        self.next = next
-
-class LinkedList: 
-    @staticmethod
-    def create(l: List[Union[int, str]]): 
-        if (not len) or len(l) == 0: 
-            return 0
-        head = Node()
-        cur = head
-        for val in l: 
-            cur.next = Node(val)
-            cur = cur.next
-        return head.next
+from collections import defaultdict
+from linear import Node, LinkedList
 
 
 def solution(root: Node) -> Node: 
-    counts = defaultdict(lambda: 0)
-    cursor = root
-    while cursor: 
-        counts[cursor.val] += 1
-        cursor = cursor.next
-    if counts[root.val] > 1: 
-        root = root.next
-    cursor = root
-    while cursor.next: 
-        if counts[cursor.val] <= 1: 
-            continue
-        if cursor.next: 
-            pass
+    if not (root and root.next): 
+        return root
+    p1, p2 = root, root.next
+    while p1 and p1.next: 
+        p2 = p1.next
+        while p2: 
+            if p1.val == p2.val: 
+                p2.val = p2.next
+                p2.next = p2.next.next
+            else: 
+                p2 = p2.next
+        p1 = p1.next
+    return root
 
 
 class TestSolution(unittest.TestCase):
     def test_runs(self): 
-        cases = [(LinkedList.create([1, 2, 2, 5, 3, 4, 5, 9, 9, 8]), LinkedList.create([1, 3, 4, 8]))]
+        cases = [(LinkedList.create([1, 2, 2, 5, 3, 4, 5, 9, 9, 8]), LinkedList.create([1, 2, 5, 3, 4, 9, 8]))]
         for i, o in cases: 
-            self.assertEqual(solution(i), o)
+            self.assertEqual(str(solution(i)), str(o))
 
 if __name__ == '__main__': 
     unittest.main()
