@@ -89,18 +89,20 @@ class LinkedList(Generic[K]):
     def __len__(self) -> int: 
         return self._len
     
-    def __str__(self, name='LinkedList') -> str:
-        _str = ''
+    def tolist(self) -> List[K]: 
         _cursor = self.__head
+        _list = []
         while _cursor: 
-            _str += str(_cursor.val) + ' -> '
+            _list.append(_cursor.val)
             _cursor = _cursor.next
-        if len(_str) > 0:
-            _str = _str[:-4]
+        return _list
+    
+    def __str__(self, name='LinkedList') -> str:
+        _str = ' -> '.join([str(item) for item in self.tolist()])
         return f'[{name} : ' + _str + ']'
     
     def __eq__(self, comp: object) -> bool:
-        return self.__str__() == comp.__str__()
+        return self.tolist() == comp.tolist()
 
     @property
     def head(self) -> Node:
