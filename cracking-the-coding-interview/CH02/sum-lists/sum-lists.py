@@ -1,60 +1,34 @@
-from typing import Union, List
+import sys
+sys.path.append(sys.path[0] + '/../../../library/python')
+
+from typing import Tuple
 import unittest
 
 
-class Node: 
-    def __init__(self, val: Union[None, int, str]=None, next=None) -> None: 
-        self.val = val
-        self.next = next
-    
-    def __eq__(self, o) -> bool:
-        return self.val == o.val
+from linear import LinkedList, Node
 
-class LinkedList: 
-    @staticmethod
-    def create(l: List[Union[int, str]]): 
-        if (not len) or len(l) == 0: 
-            return 0
-        head = Node()
-        cur = head
-        for val in l: 
-            cur.next = Node(val)
-            cur = cur.next
-        return head.next
-
-def show_linked_list(root: Node): 
-    while root: 
-        print(root.val, '->', end=' ')
-        root = root.next
-    print()
-
-def solution(root1: Node, root2: Node) -> Node: 
-    show_linked_list(root1)
-    show_linked_list(root2)
-
-    result = Node()
-    up = 0
-    cur1, cur2, cur = root1, root2, result
-    while cur1 or cur2: 
-        if not (cur1 and cur2): 
-            add = cur1.val if not cur2 else cur2.val
+def solution(head1: Node, head2: Node) -> Node: 
+    ll: LinkedList[int] = LinkedList()
+    cursor1, cursor2 = head1, head2
+    _up = 0
+    while cursor1 or cursor2: 
+        num = 0
+        if not cursor1: 
+            num = cursor2.val
+        elif not cursor2: 
+            num = cursor1.val
         else: 
-            add = cur1.val + cur2.val
-        cur.val = (add + up) % 10
-        up = (add + up) // 10
-        cur1 = cur1.next
-        cur2 = cur2.next
-        cur.next = Node()
-        cur = cur.next
-    if up > 0: 
-        cur = Node(up)
-    show_linked_list(result)
-    return result
+            num = cursor1.val + cursor2.val
+        ll.insert(0, (num + _up) % 10)
+        _up = (num + _up) // 10
+        cursor1 = cursor1.next
+        cursor2 = cursor2.next
+    return ll.head
 
 
 class TestSolution(unittest.TestCase):
     def test_runs(self): 
-        cases = [((LinkedList.create([7, 1, 6]), LinkedList.create([5, 9, 2])), LinkedList.create([9, 1, 2]))]
+        cases = [((LinkedList(7, 1, 6).head, LinkedList(5, 9, 2).head), LinkedList(9, 1, 2).head)]
         for i, o in cases: 
             self.assertEqual(solution(*i), o)
 
