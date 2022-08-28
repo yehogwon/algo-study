@@ -6,7 +6,7 @@ import unittest
 
 
 from collections import defaultdict
-from linear import Node, LinkedList
+from linear import Node, LinkedListTool
 
 
 def solution(root: Node) -> Node: 
@@ -27,7 +27,7 @@ def solution(root: Node) -> Node:
 
 class TestSolution(unittest.TestCase):
     def test_runs(self): 
-        cases = [(LinkedList.create([1, 2, 2, 5, 3, 4, 5, 9, 9, 8]), LinkedList.create([1, 2, 5, 3, 4, 9, 8]))]
+        cases = [(LinkedListTool.create([1, 2, 2, 5, 3, 4, 5, 9, 9, 8]), LinkedListTool.create([1, 2, 5, 3, 4, 9, 8]))]
         for i, o in cases: 
             self.assertEqual(str(solution(i)), str(o))
 

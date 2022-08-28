@@ -4,7 +4,7 @@ sys.path.append(sys.path[0] + '/../../../library/python')
 from typing import Tuple
 import unittest
 
-from linear import Node, LinkedList, Stack
+from linear import Node, LinkedListTool, Stack
 
 def solution(root: Node) -> bool: 
     stack = Stack()
@@ -31,9 +31,9 @@ class SolutionTest(unittest.TestCase):
 
 if __name__ == '__main__': 
     cases = [
-        (LinkedList.create(list('palinilap')), True), 
-        (LinkedList.create(list('abba')), True), 
-        (LinkedList.create(list('asdfljj')), False)
+        (LinkedListTool.create(list('palinilap')), True), 
+        (LinkedListTool.create(list('abba')), True), 
+        (LinkedListTool.create(list('asdfljj')), False)
     ] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 

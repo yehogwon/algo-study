@@ -5,7 +5,7 @@ from typing import Tuple, Union
 import unittest
 
 
-from linear import Node, LinkedList
+from linear import Node, LinkedListTool
 
 
 def solution(root: Node, k: int) -> Union[int, str]: 
@@ -28,7 +28,7 @@ class SolutionTest(unittest.TestCase):
         self.assertEqual(solution(*self.input), self.output)
 
 if __name__ == '__main__': 
-    cases = [((LinkedList.create([1, 2, 3, 4, 5]), 2), 4), ((LinkedList.create(['a', 'b', 'd', 'e', 'g', 'c']), 3), 'e')] # edit here
+    cases = [((LinkedListTool.create([1, 2, 3, 4, 5]), 2), 4), ((LinkedListTool.create(['a', 'b', 'd', 'e', 'g', 'c']), 3), 'e')] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 
         suite.addTest(SolutionTest('test_runs', (i, o)))

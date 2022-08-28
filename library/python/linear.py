@@ -19,7 +19,7 @@ class Node(Generic[K]):
             text = text[:-4]
         return text
 
-class LinkedList(Generic[K]): 
+class LinkedListTool(Generic[K]): 
     @classmethod
     def create(cls, l: List[Union[int, str]], cycle: int=-1) -> Node: 
         if (not l) or len(l) == 0: 
