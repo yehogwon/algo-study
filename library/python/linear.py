@@ -99,6 +99,9 @@ class LinkedList(Generic[K]):
         if len(_str) > 0:
             _str = _str[:-4]
         return '[LinkedList : ' + _str + ']'
+    
+    def __eq__(self, comp: object) -> bool:
+        return self.__str__() == comp.__str__()
 
 class LinkedListTool(Generic[K]): 
     @classmethod
