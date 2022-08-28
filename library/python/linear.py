@@ -1,9 +1,10 @@
 from collections import deque
-from typing import Deque, List, Optional, TypeVar, Union
+from typing import Deque, Generic, List, Optional, TypeVar, Union
 
+K = TypeVar('K')
 
-class Node: 
-    def __init__(self, val: Union[int, str]=None, next=None) -> None: 
+class Node(Generic[K]): 
+    def __init__(self, val: K, next=None) -> None: 
         self.val = val
         self.next: Node = next
     
@@ -18,7 +19,7 @@ class Node:
             text = text[:-4]
         return text
 
-class LinkedList: 
+class LinkedList(Generic[K]): 
     @classmethod
     def create(cls, l: List[Union[int, str]], cycle: int=-1) -> Node: 
         if (not l) or len(l) == 0: 
@@ -61,10 +62,9 @@ class LinkedList:
             cur = cur.next
         root.next = head.next
 
-class Stack(): 
-    K = TypeVar('K')
+class Stack(Generic[K]): 
     def __init__(self) -> None:
-        self.__list: List[self.K] = []
+        self.__list: List[K] = []
     
     def push(self, val: K) -> None:
         self.__list.append(val)
@@ -86,8 +86,8 @@ class Stack():
     def __str__(self) -> str:
         return str(self.__list)
 
-class Queue(): 
-    K = TypeVar('K')
+# FIXME: Re-Implement the queue datastructure
+class Queue(Generic[K]): 
     def __init__(self) -> None:
         self.__root = Node()
         self.__cursor = self.__root
