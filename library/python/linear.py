@@ -22,20 +22,20 @@ class Node(Generic[K]):
 
 class LinkedList(Generic[K]): 
     def __init__(self, *args: Tuple[K]) -> None:
-        self.head = None
-        self.cur = self.head # always points the last node
+        self.__head = None
+        self.__cur = self.__head # always points the last node
         self._len = 0
 
         for _val in args: 
             self.add(_val)
     
     def add(self, val: K) -> None: 
-        if not self.head: 
-            self.head = Node(val)
-            self.cur = self.head
+        if not self.__head: 
+            self.__head = Node(val)
+            self.__cur = self.__head
         else:
-            self.cur.next = Node(val)
-            self.cur = self.cur.next
+            self.__cur.next = Node(val)
+            self.__cur = self.__cur.next
         self._len += 1
 
     def insert(self, index: int, val: K) -> None: 
@@ -46,9 +46,9 @@ class LinkedList(Generic[K]):
         if index < 0: 
             raise IndexError(f'Index {index} out of range {self._len} : LinkedList')
         if index == 0: 
-            self.head = Node(val, self.head)
+            self.__head = Node(val, self.__head)
         else: 
-            _cursor = self.head
+            _cursor = self.__head
             for _ in range(index - 1):
                 _cursor = _cursor.next
             _cursor.next = Node(val, _cursor.next)
@@ -64,7 +64,7 @@ class LinkedList(Generic[K]):
             index += self._len
         if index >= self._len or index < 0: 
             raise IndexError(f'Index {index} out of range {self._len} : LinkedList')
-        _cursor = self.head
+        _cursor = self.__head
         for _ in range(index): 
             _cursor = _cursor.next
         return _cursor.val
@@ -75,9 +75,9 @@ class LinkedList(Generic[K]):
         if index >= self._len or index < 0:
             raise IndexError(f'Index {index} out of range {self._len} : LinkedList')
         if index == 0: 
-            self.head = self.head.next
+            self.__head = self.__head.next
         else:
-            _cursor = self.head
+            _cursor = self.__head
             for _ in range(index - 1):
                 _cursor = _cursor.next
             _cursor.next = _cursor.next.next
@@ -91,7 +91,7 @@ class LinkedList(Generic[K]):
     
     def __str__(self, name='LinkedList') -> str:
         _str = ''
-        _cursor = self.head
+        _cursor = self.__head
         while _cursor: 
             _str += str(_cursor.val) + ' -> '
             _cursor = _cursor.next
@@ -101,6 +101,10 @@ class LinkedList(Generic[K]):
     
     def __eq__(self, comp: object) -> bool:
         return self.__str__() == comp.__str__()
+
+    @property
+    def head(self) -> Node:
+        return self.__head
 
 # TODO: Refactor: palindrome.py, remove-dups.py, return-kth-to-last.py
 class LinkedListTool(Generic[K]): 
