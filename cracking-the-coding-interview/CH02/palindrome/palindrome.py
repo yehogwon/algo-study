@@ -6,21 +6,37 @@ import unittest
 
 from linear import LinkedList, Node, Stack
 
-def solution(root: Node) -> bool: 
+# using backtracking with a stack
+def solution(head: Node) -> bool: 
     stack = Stack()
     length = 1
-    cur = root
+    cur = head
     while cur: # O(n)
         stack.push(cur.val)
         length += 1
         cur = cur.next
-    cur = root
+    cur = head
     for _ in range(length // 2): # O(n)
         if cur.val != stack.pop(): 
             return False
         cur = cur.next
     return True
 
+# using two pointers teechnique and a stack
+def solution(head: Node[str]) -> bool: 
+    slow, fast = head, head
+    stack = Stack[str]()
+    while fast and fast.next:
+        stack.push(slow.val)
+        slow = slow.next
+        fast = fast.next.next
+    if fast: # odd number of nodes
+        slow = slow.next
+    while slow:
+        if slow.val != stack.pop():
+            return False
+        slow = slow.next
+    return True
 
 class SolutionTest(unittest.TestCase):
     def __init__(self, methodName: str, param: Tuple) -> None:
