@@ -26,9 +26,8 @@ class LinkedList(Generic[K]):
         self.cur = self.head # always points the last node
         self._len = 0
 
-        if len(args) > 0: 
-            for _val in args[0]: 
-                self.add(_val)
+        for _val in args: 
+            self.add(_val)
     
     def add(self, val: K) -> None: 
         if not self.head: 
@@ -63,7 +62,7 @@ class LinkedList(Generic[K]):
     def peek(self, index: int=-1) -> K: 
         if index < 0: 
             index += self._len
-        if index > self._len or index < 0: 
+        if index >= self._len or index < 0: 
             raise IndexError(f'Index {index} out of range {self._len} : LinkedList')
         _cursor = self.head
         for _ in range(index): 
@@ -73,7 +72,7 @@ class LinkedList(Generic[K]):
     def remove(self, index: int=-1): 
         if index < 0: 
             index += self._len
-        if index > self._len or index < 0:
+        if index >= self._len or index < 0:
             raise IndexError(f'Index {index} out of range {self._len} : LinkedList')
         if index == 0: 
             self.head = self.head.next
@@ -90,7 +89,7 @@ class LinkedList(Generic[K]):
     def __len__(self) -> int: 
         return self._len
     
-    def __str__(self) -> str:
+    def __str__(self, name='LinkedList') -> str:
         _str = ''
         _cursor = self.head
         while _cursor: 
@@ -98,11 +97,12 @@ class LinkedList(Generic[K]):
             _cursor = _cursor.next
         if len(_str) > 0:
             _str = _str[:-4]
-        return '[LinkedList : ' + _str + ']'
+        return f'[{name} : ' + _str + ']'
     
     def __eq__(self, comp: object) -> bool:
         return self.__str__() == comp.__str__()
 
+# TODO: Refactor: palindrome.py, remove-dups.py, return-kth-to-last.py
 class LinkedListTool(Generic[K]): 
     @classmethod
     def create(cls, l: List[K], cycle: int=-1) -> Node: 
@@ -170,75 +170,61 @@ class Stack(Generic[K]):
     def __str__(self) -> str:
         return str(self.__list)
 
-# FIXME: Re-Implement the queue datastructure
-class Queue(Generic[K]): 
-    def __init__(self) -> None:
-        self.__root = Node()
-        self.__cursor = self.__root
-        self.__len = 0
-    
+class Queue(Generic[K]): # Insert backward, Pop forward
+    def __init__(self, *args: Tuple[K]) -> None: 
+        self.__ll: LinkedList[K] = LinkedList(*args)
+
     def add(self, val: K) -> None: 
-        self.__cursor = self.__cursor.next
-        self.__cursor = Node(val)
-        self.__len += 1
-    
-    def peek(self) -> Optional[K]: 
-        if self.empty(): 
-            return None
-        return self.__root.next.val
-    
-    def remove(self) -> Optional[K]: 
-        if self.empty(): 
-            return None
-        val = self.__root.next.val
-        self.__root.next = self.__root.next.next
-        self.__len -= 1
-        return val
-    
-    def poll(self) -> Optional[K]: 
-        return self.remove()
-    
-    def __len__(self) -> int:
-        return self.__len
-    
+        self.__ll.add(val)
+
+    def pop(self) -> K: 
+        return self.__ll.pop(0)
+
+    def peek(self) -> K: 
+        return self.__ll.peek(0)
+
+    def remove(self): 
+        self.__ll.remove(0)
+
     def empty(self) -> bool:
-        return len(self) == 0
-    
+        return self.__ll.empty()
+
+    def __len__(self) -> int:
+        return len(self.__ll)
+
     def __str__(self) -> str:
-        return self.__root.next.__str__(reverse=True)
+        return self.__ll.__str__('Queue')
 
 if __name__ == '__main__': 
-    ll: LinkedList[int] = LinkedList([1, 2, 3, 4, 5])
-    print(ll)
-    ll.insert(0, 10)
-    print(ll)
-    ll.remove(3)
-    print(ll)
-    ll.remove(1)
-    print(ll)
-    ll.remove(0)
-    print(ll)
-    ll.add(100)
-    print(ll)
-    ll.add(58)
-    print(ll)
-    ll.add(37)
-    print(ll)
-    print('POP: ', ll.pop())
-    print(ll)
-    print('POP: ', ll.pop())
-    print(ll)
-    print('PEEK: ', ll.peek())
-    print(ll)
-    print('PEEK: ', ll.peek(0))
-    print(ll)
-    print('POP: ', ll.pop())
-    print(ll)
-    print('POP: ', ll.pop())
-    print(ll)
-    print('POP: ', ll.pop())
-    print(ll)
-    print(ll.empty())
-    print('POP: ', ll.pop())
-    print(ll)
-    print(ll.empty())
+    queue: Queue[int] = Queue(1, 2, 3, 4, 5, 6)
+    print(queue)
+    queue.remove()
+    print(queue)
+    queue.remove()
+    print(queue)
+    queue.remove()
+    print(queue)
+    queue.add(100)
+    print(queue)
+    queue.add(58)
+    print(queue)
+    queue.add(37)
+    print(queue)
+    print('POP: ', queue.pop())
+    print(queue)
+    print('POP: ', queue.pop())
+    print(queue)
+    print('PEEK: ', queue.peek())
+    print(queue)
+    print('PEEK: ', queue.peek())
+    print(queue)
+    print('POP: ', queue.pop())
+    print(queue)
+    print('POP: ', queue.pop())
+    print(queue)
+    print('POP: ', queue.pop())
+    print(queue)
+    print(queue.empty())
+    print('POP: ', queue.pop())
+    print(queue)
+    print(queue.empty())
