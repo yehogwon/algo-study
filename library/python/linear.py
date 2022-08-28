@@ -8,17 +8,21 @@ class Node(Generic[K]):
     def __init__(self, val: K, next=None) -> None: 
         self.val = val
         self.next: Node = next
+
+    def tolist(self) -> List[K]: 
+        _cursor = self
+        _list = []
+        while _cursor: 
+            _list.append(_cursor.val)
+            _cursor = _cursor.next
+        return _list
     
-    def __str__(self, reverse=False) -> str:
-        text = ''
-        cursor = self
-        sep = ' -> ' if reverse is False else ' <- '
-        while cursor is not None: 
-            text += str(cursor.val) + sep
-            cursor = cursor.next
-        if len(text) > 0: 
-            text = text[:-4]
-        return text
+    def __str__(self, name='Node') -> str:
+        _str = ' -> '.join([str(item) for item in self.tolist()])
+        return f'[{name} : ' + _str + ']'
+    
+    def __eq__(self, comp: object) -> bool:
+        return self.tolist() == comp.tolist()
 
 class LinkedList(Generic[K]): 
     def __init__(self, *args: Tuple[K]) -> None:
