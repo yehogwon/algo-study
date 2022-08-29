@@ -112,7 +112,7 @@ class LinkedList(Generic[K]):
     def head(self) -> Node:
         return self.__head
 
-# TODO: Refactor: palindrome.py, remove-dups.py, return-kth-to-last.py
+# TODO: Refactor: remove-dups.py, return-kth-to-last.py
 class LinkedListTool(Generic[K]): 
     @classmethod
     def create(cls, l: List[K], cycle: int=-1) -> Node: 
@@ -157,8 +157,8 @@ class LinkedListTool(Generic[K]):
         root.next = head.next
 
 class Stack(Generic[K]): 
-    def __init__(self) -> None:
-        self.__list: List[K] = []
+    def __init__(self, *args) -> None:
+        self.__list: List[K] = list(args)
     
     def push(self, val: K) -> None:
         self.__list.append(val)
@@ -178,7 +178,7 @@ class Stack(Generic[K]):
         return len(self) == 0
     
     def __str__(self) -> str:
-        return str(self.__list)
+        return '[Stack : ' + ', '.join([str(item) for item in self.__list]) + ']'
 
 class Queue(Generic[K]): # Insert backward, Pop forward
     def __init__(self, *args: Tuple[K]) -> None: 
@@ -206,35 +206,5 @@ class Queue(Generic[K]): # Insert backward, Pop forward
         return self.__ll.__str__('Queue')
 
 if __name__ == '__main__': 
-    queue: Queue[int] = Queue(1, 2, 3, 4, 5, 6)
-    print(queue)
-    queue.remove()
-    print(queue)
-    queue.remove()
-    print(queue)
-    queue.remove()
-    print(queue)
-    queue.add(100)
-    print(queue)
-    queue.add(58)
-    print(queue)
-    queue.add(37)
-    print(queue)
-    print('POP: ', queue.pop())
-    print(queue)
-    print('POP: ', queue.pop())
-    print(queue)
-    print('PEEK: ', queue.peek())
-    print(queue)
-    print('PEEK: ', queue.peek())
-    print(queue)
-    print('POP: ', queue.pop())
-    print(queue)
-    print('POP: ', queue.pop())
-    print(queue)
-    print('POP: ', queue.pop())
-    print(queue)
-    print(queue.empty())
-    print('POP: ', queue.pop())
-    print(queue)
-    print(queue.empty())
+    stack = Stack(1, 2, 3)
+    print(stack)
