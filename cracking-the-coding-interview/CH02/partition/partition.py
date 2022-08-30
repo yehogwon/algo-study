@@ -18,7 +18,7 @@ def solution(head: Node, partition: int) -> Node:
             p1 = p1.next
         else: 
             p2.next = Node(cursor.val)
-            p2 = p.next
+            p2 = p1.next
         cursor = cursor.next
     p1.next = great.next
     return less.next
