@@ -26,6 +26,8 @@ def solution(head1: Node, head2: Node) -> Node:
             cursor2 = cursor2.next
         ll.add((num + _up) % 10)
         _up = (num + _up) // 10
+    if _up != 0: 
+        ll.add(_up)
     return ll.head
 
 # Solution for the follow-up problem
@@ -43,7 +45,8 @@ class SolutionTest(unittest.TestCase):
 if __name__ == '__main__': 
     cases = [
         ((LinkedList(7, 1, 6).head, LinkedList(5, 9, 2).head), LinkedList(2, 1, 9).head), 
-        ((LinkedList(8, 1).head, LinkedList(5).head), LinkedList(3, 2).head)
+        ((LinkedList(8, 1).head, LinkedList(5).head), LinkedList(3, 2).head), 
+        ((LinkedList(9, 7, 8).head, LinkedList(6, 8, 5).head), LinkedList(5, 6, 4, 1).head), 
     ] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 
