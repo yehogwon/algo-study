@@ -7,7 +7,7 @@ import unittest
 
 from linear import Node, LinkedList
 
-
+# Solution for the original question
 def solution(root: Node) -> Node: 
     ll = LinkedList()
     items = set()
@@ -19,6 +19,18 @@ def solution(root: Node) -> Node:
         cursor = cursor.next
     return ll.head
 
+# Solution for the follow-up question
+def solution(root: Node) -> Node: 
+    p1, p2 = root, root
+    while p1: 
+        p2 = p1
+        while p2 and p2.next: 
+            if p1.val == p2.next.val: 
+                p2.next = p2.next.next
+            else: 
+                p2 = p2.next
+        p1 = p1.next
+    return root
 
 class SolutionTest(unittest.TestCase):
     def __init__(self, methodName: str, param: Tuple) -> None:
