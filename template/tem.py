@@ -17,7 +17,9 @@ class SolutionTest(unittest.TestCase):
         self.assertEqual(solution(*self.input), self.output)
 
 if __name__ == '__main__': 
-    cases = [] # edit here
+    cases = [
+        
+    ] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 
         suite.addTest(SolutionTest('test_runs', (i, o)))
