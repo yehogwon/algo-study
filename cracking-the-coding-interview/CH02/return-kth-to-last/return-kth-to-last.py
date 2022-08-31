@@ -5,19 +5,19 @@ from typing import Tuple, Union
 import unittest
 
 
-from linear import Node, LinkedListTool
+from linear import Node, LinkedList
 
 
 def solution(root: Node, k: int) -> Union[int, str]: 
-    length = -1
-    cursor = root
-    while cursor is not None: # O(n)
-        length += 1
-        cursor = cursor.next
-    cursor = root
-    for _ in range(length - k + 1): 
-        cursor = cursor.next
-    return cursor.val
+    p1, p2 = root, root
+    for _ in range(k): 
+        if p1 is None: 
+            return
+        p1 = p1.next
+    while p1: 
+        p1 = p1.next
+        p2 = p2.next
+    return p2.val
 
 
 class SolutionTest(unittest.TestCase):
@@ -28,7 +28,10 @@ class SolutionTest(unittest.TestCase):
         self.assertEqual(solution(*self.input), self.output)
 
 if __name__ == '__main__': 
-    cases = [((LinkedListTool.create([1, 2, 3, 4, 5]), 2), 4), ((LinkedListTool.create(['a', 'b', 'd', 'e', 'g', 'c']), 3), 'e')] # edit here
+    cases = [
+        ((LinkedList(1, 2, 3, 4, 5).head, 2), 4), 
+        ((LinkedList('a', 'b', 'd', 'e', 'g', 'c').head, 3), 'e')
+    ] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 
         suite.addTest(SolutionTest('test_runs', (i, o)))
