@@ -17,7 +17,7 @@ class Node(Generic[K]):
             _cursor = _cursor.next
         return _list
     
-    def __str__(self, name='Node') -> str:
+    def __repr__(self, name='Node') -> str:
         _str = ' -> '.join([str(item) for item in self.tolist()])
         return f'[{name} : ' + _str + ']'
     
@@ -101,7 +101,7 @@ class LinkedList(Generic[K]):
             _cursor = _cursor.next
         return _list
     
-    def __str__(self, name='LinkedList') -> str:
+    def __repr__(self, name='LinkedList') -> str:
         _str = ' -> '.join([str(item) for item in self.tolist()])
         return f'[{name} : ' + _str + ']'
     
