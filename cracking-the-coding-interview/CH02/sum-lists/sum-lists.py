@@ -7,8 +7,8 @@ import unittest
 
 from linear import LinkedList, Node
 
-# Solution for the original problem
-def solution(head1: Node, head2: Node) -> Node: 
+# Solution (iterative) for the original problem
+def _solution(head1: Node, head2: Node) -> Node: 
     ll: LinkedList[int] = LinkedList()
     cursor1, cursor2 = head1, head2
     _up = 0
@@ -29,6 +29,26 @@ def solution(head1: Node, head2: Node) -> Node:
     if _up != 0: 
         ll.add(_up)
     return ll.head
+
+# Solution (recursive) for the original problem
+def solution(head1: Node[int], head2: Node[int]) -> Node[int]: 
+    def recursion(node1: Node[int], node2: Node[int], up: int) -> Node[int]: 
+        if not node1 and not node2: 
+            return None if up == 0 else Node(up)
+        if not node1: 
+            num = node2.val
+            node2 = node2.next
+        elif not node2: 
+            num = node1.val
+            node1 = node1.next
+        else: 
+            num = node1.val + node2.val
+            node1 = node1.next
+            node2 = node2.next
+        node = Node((num + up) % 10)
+        node.next = recursion(node1, node2, (num + up) // 10)
+        return node
+    return recursion(head1, head2, 0)
 
 # Solution for the follow-up problem
 def _solution(head1: Node, head2: Node) -> Node: 
