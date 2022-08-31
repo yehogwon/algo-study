@@ -7,7 +7,6 @@ import unittest
 
 from linear import Node, LinkedList
 
-
 def solution(root: Node, k: int) -> Union[int, str]: 
     p1, p2 = root, root
     for _ in range(k): 
@@ -17,7 +16,7 @@ def solution(root: Node, k: int) -> Union[int, str]:
     while p1: 
         p1 = p1.next
         p2 = p2.next
-    return p2.val
+    return p2.val if p2 else None
 
 
 class SolutionTest(unittest.TestCase):
@@ -30,7 +29,10 @@ class SolutionTest(unittest.TestCase):
 if __name__ == '__main__': 
     cases = [
         ((LinkedList(1, 2, 3, 4, 5).head, 2), 4), 
-        ((LinkedList('a', 'b', 'd', 'e', 'g', 'c').head, 3), 'e')
+        ((LinkedList('a', 'b', 'd', 'e', 'g', 'c').head, 3), 'e'),
+        ((LinkedList(1, 2, 3, 4, 5).head, 0), None), 
+        ((LinkedList('a', 'b', 'd', 'e', 'g', 'c').head, 6), 'a'),
+        ((LinkedList().head, 3), None)
     ] # edit here
     suite = unittest.TestSuite()
     for i, o in cases: 
