@@ -8,7 +8,7 @@ import unittest
 from linear import LinkedList, Node
 
 # Solution (iterative) for the original problem
-def _solution(head1: Node, head2: Node) -> Node: 
+def solution(head1: Node, head2: Node) -> Node: 
     ll: LinkedList[int] = LinkedList()
     cursor1, cursor2 = head1, head2
     _up = 0
@@ -51,8 +51,23 @@ def solution(head1: Node[int], head2: Node[int]) -> Node[int]:
     return recursion(head1, head2, 0)
 
 # Solution for the follow-up problem
-def _solution(head1: Node, head2: Node) -> Node: 
-    pass
+def solution(head1: Node, head2: Node) -> Node: 
+    def _len(node: Node) -> int: 
+        if not node: 
+            return 0
+        return 1 + _len(node.next)
+    l1, l2 = _len(head1), _len(head2)
+    longer = head1 if l1 > l2 else head2
+    shorter = head2 if l1 > l2 else head1
+    for _ in range(abs(l1 - l2)):
+        shorter = Node(0, shorter)
+    _sum = 0
+    c1, c2 = longer, shorter
+    while c1 and c2:
+        _sum = _sum * 10 + (c1.val + c2.val)
+        c1 = c1.next
+        c2 = c2.next
+    return LinkedList(*[int(item) for item in str(_sum)]).head
 
 
 class SolutionTest(unittest.TestCase):
@@ -63,11 +78,18 @@ class SolutionTest(unittest.TestCase):
         self.assertEqual(solution(*self.input).tolist(), self.output.tolist())
 
 if __name__ == '__main__': 
-    cases = [
+    cases = [ # cases for the original problem
         ((LinkedList(7, 1, 6).head, LinkedList(5, 9, 2).head), LinkedList(2, 1, 9).head), 
         ((LinkedList(8, 1).head, LinkedList(5).head), LinkedList(3, 2).head), 
         ((LinkedList(9, 7, 8).head, LinkedList(6, 8, 5).head), LinkedList(5, 6, 4, 1).head), 
     ] # edit here
+
+    cases = [ # cases for the follow-up problem
+        ((LinkedList(6, 1, 7).head, LinkedList(2, 9, 5).head), LinkedList(9, 1, 2).head), 
+        ((LinkedList(8, 1).head, LinkedList(5).head), LinkedList(8, 6).head), 
+        ((LinkedList(9, 7, 8).head, LinkedList(6, 8, 5).head), LinkedList(1, 6, 6, 3).head), 
+    ] # edit here
+
     suite = unittest.TestSuite()
     for i, o in cases: 
         suite.addTest(SolutionTest('test_runs', (i, o)))
