@@ -9,8 +9,8 @@ from linear import Stack
 
 K = TypeVar('K')
 class SortedStack(Stack, Generic[K]): 
-    def __init__(self, *args: Tuple[K]) -> None:
-        super().__init__(*args)
+    def __init__(self) -> None:
+        super().__init__()
         self._stack: Stack[K] = Stack()
     
     def push(self, val: K) -> None: 
